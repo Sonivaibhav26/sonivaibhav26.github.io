@@ -1,434 +1,121 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Vaibhav Soni - Full Stack Devloper</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-144x144-precomposed.png">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+        /* Google Fonts */
 
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-    <script src="js/vendor/jquery.hashchange.min.js"></script>
-    <script src="js/vendor/jquery.easytabs.min.js"></script>
+        @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
-    <script src="js/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-      <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
-      <![endif]-->
+        /* Global */
+
+        html {
+            min-height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            height: calc(100vh - 8em);
+            padding: 4em;
+            color: rgba(255, 255, 255, .75);
+            font-family: 'Anonymous Pro', monospace;
+            background-color: rgb(25, 25, 25);
+        }
+
+        .line-1 {
+            position: relative;
+            top: 30%;
+            width: 24em;
+            margin: 0 auto;
+            border-right: 2px solid rgba(255, 255, 255, .75);
+            font-size: 280%;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(-50%);
+        }
+
+        .line-2 {
+            position: relative;
+            top: 31%;
+            margin: 0 auto;
+            font-size: 100%;
+            text-align: center;
+        }
+
+        /* Animation */
+
+        .anim-typewriter {
+            animation: typewriter 4s steps(12) 1s 1 normal both,
+            blinkTextCursor 500ms steps(44) infinite normal;
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+            to {
+                width: 6.5em;
+            }
+        }
+
+        @keyframes blinkTextCursor {
+            from {
+                border-right-color: rgba(255, 255, 255, .75);
+            }
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        a {
+            padding: 1em;
+            color: inherit;
+        }
+
+        div {
+            opacity: 1;
+            transition: opacity 500ms;
+        }
+
+        div.show {
+            opacity: 0;
+        }
+
+        #links {
+            visibility: hidden;
+            animation: css 0s 5.5s forwards;
+        }
+
+        @keyframes css {
+            to {
+                visibility: visible;
+            }
+        }
+    </style>
 </head>
 
-<body class="bg-fixed bg-1">
-    <!--[if lt IE 7]>
-    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
-    <div class="main-container">
-        <div class="main wrapper clearfix">
-            <!-- Header Start -->
-            <header id="header">
-                <div id="logo">
-                    <h2>
-                        Vaibhav Soni
-                    </h2>
-                    <h4>
-                        Doer / Devloper / Visionary
-                    </h4>
-                </div>
-            </header>
-            <!-- Header End -->
-            <!-- Main Tab Container -->
-            <div id="tab-container" class="tab-container">
-                <!-- Tab List -->
-                <ul class='etabs'>
-                    <li class='tab' id="tab-about">
-                        <a href="#about"><i class="icon-user"></i><span> About Me</span></a>
-                    </li>
-                    <li class='tab'>
-                        <a href="#resume"><i class="icon-file-text"></i><span> Resume</span></a>
-                    </li>
-                    <li class='tab'>
-                        <a href="#portfolio"><i class="icon-heart"></i><span> Portfolio</span></a>
-                    </li>
-                    <li class='tab'>
-                        <a href="#contact"><i class="icon-envelope"></i><span> Contact</span></a>
-                    </li>
-                </ul>
-                <!-- End Tab List -->
-                <div id="tab-data-wrap">
-                    <!-- About Tab Data -->
-                    <div id="about">
-                        <section class="clearfix">
-                            <div class="g2">
-                                <div class="photo">
-                                    <img src="images/main.jpg" alt="Vaibhav Soni">
-                                </div>
-                                <div class="info">
-                                    <h2>
-                                        Vaibhav Soni
-                                    </h2>
-                                    <h4>
-                                        Doer / Devloper / Visionary / learner
-                                    </h4>
-                                    <p>
-                                        A Software Engineer , who has professtional expirence in designing, devloping & delivering Software Applications and products
-                                        specailly for start ups. Ping pong , open source lover and basically love to learn
-                                        anything which i found interesting and required.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="g1">
-                                <div class="main-links sidebar">
-                                    <ul>
-                                        <li>
-                                            <a href="#resume">View My Resume</a>
-                                        </li>
-                                        <li>
-                                            <a href="#portfolio">My Portfolio</a>
-                                        </li>
-                                        <li>
-                                            <a href="#contact">Hire me for your next project</a>
-                                        </li>
-                                        <li>
-                                            <a href="#features">Features</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="break"></div>
-                            <div class="contact-info">
-                                <div class="g1">
-                                    <div class="item-box clearfix">
-                                        <i class="icon-envelope"></i>
-                                        <div class="item-data">
-                                            <h3><a href="mailto:vssonivaibhav6@gmail.com">vssonivaibhav6@gmail.com</a></h3>
-                                            <p>Email Address</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="g1">
-                                    <div class="item-box clearfix">
-                                        <i class="icon-linkedin"></i>
-                                        <div class="item-data">
-                                            <h3><a href="https://in.linkedin.com/in/vaibhavsonigoldsmith" target="_blank">Vaibhavsoni</a></h3>
-                                            <p>Linkedin Profile</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="g1">
-                                    <div class="item-box clearfix">
-                                        <i class="icon-facebook"></i>
-                                        <div class="item-data">
-                                            <h3><a href="http://fb.me/vaibhavsoni.goldsmith" target="_blank">Vaibhavsoni</a></h3>
-                                            <p>Facebook Profile</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="g1">
-                                    <div class="item-box clearfix">
-                                        <i class="icon-github"></i>
-                                        <div class="item-data">
-                                            <h3><a href="https://github.com/Sonivaibhav26" target="_blank">Sonivaibhav26</a></h3>
-                                            <p>Github Handle</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!-- content -->
-                    </div>
-                    <!-- End About Tab Data -->
-                    <!-- Resume Tab Data -->
-                    <div id="resume">
-                        <section class="clearfix">
-                            <div class="g2">
-                                <h3>
-                                    Work Experience
-                                </h3>
-                                <ul class="no-list work">
-                                    <li>
-                                        <h5>
-                                            <a href="http://www.cantern.in" target="_blank">Cantern</a>
-                                        </h5><span class="label label-info">2016-present</span>
-                                        <p>
-                                            Cantern is an educational analytics company , they enable colleges to enhance their profile and students'​ employability
-                                            through the power of data aggregate the data from various sources and employ
-                                            a series of algorithms to understand and convert the raw data to useful insights
-                                            for the college.
-                                        </p>
-                                        <ul>
-                                            <li>Worked on developing product from scratch which includes Dashboard and different
-                                                servers.
-                                            </li>
-                                            <li>
-                                                Worked On developing Reporting framework which include usages of Phantom Js , Nodejs ,MongoDb ,Expressjs
-                                            </li>
-                                            <li>
-                                                Have Also worked on Charting and graph libraries like Morris js , Plottable js , C3js etc .
-                                            </li>
-                                        </ul>
+<body>
 
-                                    </li>
-                                    <li>
-                                        <h5>
-                                            <a href="http://www.eronkan.com" target="_blank">Eronkan</a> 
-                                        </h5><span class="label label-info">2015-2016</span>
-                                        <p>
-                                            Eronkan provides various IIOT services to enterprises. I have worked on the core product features and also internal tools. The technology stack that I was involved in consisted of Node JS and EmberJS.
-                                        </p>
-                                        <ul>
-                                            <li>
-                                                Worked on developing alerting systems which uses sms, mails to send alert 	to customers in case of various client defined situations.
-                                            </li>
-                                            <li>
-                                                Worked on various customizations of frontend templates to fulfil client requirements.
-                                            </li>
-                                            <li>
-                                                Responsible for maintaining beta version of the product on an ec2 instances which include updating source code, regularly test new features etc.
-                                            </li>
-                                            <li>
-                                                Worked on building a monitoring system which keep check on driver's status installed on client's system.
-                                            </li>
-                                            <li>
-                                                Worked on automation of server related task using monit, upstart and shell scripts.
-                                            </li>
-                                            <li>
-                                                Worked on developing various api used for various features in the framework, developed using various tools like redis, rabbitmq, sqs etc.
-                                            </li>
-                                            <li>
-                                                Have also made many clients visit where I was responsible to fetch data from FANUC CNC machine using RS232 ports.
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <h5>
-                                            Being Awesome
-                                        </h5><span class="label label-danger">1993-Till Death</span>
-                                        <p>
-                                            ;)
-                                        </p>
-                                    </li>
-                                </ul>
-                                <h3>
-                                    Education
-                                </h3>
-                                <ul class="no-list work">
-                                    <li>
-                                        <h5>
-                                            Poornima Institute Of Engineering , Jaipur , Rajasthan
-                                        </h5><span class="label label-success">2011-2015</span>
-                                        <p>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <h5>
-                                            Army Public School , Bikaner , Rajasthan , India
-                                        </h5><span class="label label-warning">2002-2008</span>
-                                        <p>
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="g1">
-                                <div class="sidebar">
-                                    <h3>
-                                        Skills & Tools
-                                    </h3>
-                                    <h5>
-                                        Software
-                                    </h5>
-                                    <div class="meter emerald">
-                                        <span style="width: 90%"><span>Git & Github</span></span>
-                                    </div>
-                                    <div class="meter carrot">
-                                        <span style="width: 90%"><span>Vs Code</span></span>
-                                    </div>
-                                    <div class="meter wisteria">
-                                        <span style="width: 90%"><span>Linux</span></span>
-                                    </div>
-                                    <div class="meter sunflower">
-                                        <span style="width: 60%"><span>Wordpress</span></span>
-                                    </div>
-                                    <div class="meter midnight">
-                                        <span style="width: 80%"><span>Slack</span></span>
-                                    </div>
-                                    <div class="break"></div>
-                                    <h5>
-                                        Design & Js frameWorks
-                                    </h5>
-                                    <div class="meter emerald">
-                                        <span style="width: 83.3%"><span>User Interface</span></span>
-                                    </div>
-                                    <div class="meter carrot">
-                                        <span style="width: 70%"><span>Angularjs</span></span>
-                                    </div>
-                                    <div class="meter wisteria">
-                                        <span style="width: 40%"><span>EmberJS</span></span>
-                                    </div>
-                                    <div class="break"></div>
-                                    <h5>
-                                        Programming Language
-                                    </h5>
-                                    <div class="meter emerald">
-                                        <span style="width: 60.3%"><span>HTML/CSS</span></span>
-                                    </div>
-                                    <div class="meter carrot">
-                                        <span style="width: 80%"><span>Nodejs & JavaScript</span></span>
-                                    </div>
-                                    <div class="meter wisteria">
-                                        <span style="width: 75%"><span>MongoDb</span></span>
-                                    </div>
-                                    <div class="meter sunflower">
-                                        <span style="width: 65%"><span>Java</span></span>
-                                    </div>
-                                    <div class="meter asbestos">
-                                        <span style="width: 82%"><span>C++/C</span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>  
-                    </div>
-                    <!-- End Resume Tab Data -->
-                    <!-- Portfolio Tab Data -->
-                    <div id="portfolio">
-                        <h1>Coming Soon</h1>
-                        <!--<section class="clearfix">
-                        <div class="g1">
-                            <div class="image">
-                                <img src="http://lorempixel.com/306/306/sports/1" alt="">
-                                <div class="image-overlay">
-                                    <div class="image-link">
-                                        <a href="http://lorempixel.com/606/606/sports/1" class="btn">Full View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g1">
-                            <div class="image">
-                                <img src="http://lorempixel.com/306/306/sports/2" alt="">
-                                <div class="image-overlay">
-                                    <div class="image-link">
-                                        <a href="http://lorempixel.com/606/606/sports/2" class="btn">Full View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g1">
-                            <div class="image">
-                                <img src="http://lorempixel.com/306/306/sports/3" alt="">
-                                <div class="image-overlay">
-                                    <div class="image-link">
-                                        <a href="http://lorempixel.com/606/606/sports/3" class="btn">Full View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="break"></div>
-                        <div class="g1">
-                            <div class="image">
-                                <img src="http://lorempixel.com/306/306/sports/4" alt="">
-                                <div class="image-overlay">
-                                    <div class="image-link">
-                                        <a href="http://lorempixel.com/606/606/sports/4" class="btn">Full View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g1">
-                            <div class="image">
-                                <img src="http://lorempixel.com/306/306/sports/5" alt="">
-                                <div class="image-overlay">
-                                    <div class="image-link">
-                                        <a href="http://lorempixel.com/606/606/sports/5" class="btn">Full View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="g1">
-                            <div class="image">
-                                <img src="http://lorempixel.com/306/306/business/2" alt="">
-                                <div class="image-overlay">
-                                    <div class="image-link">
-                                        <a href="http://lorempixel.com/606/606/business/2" class="btn">Full View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </section>-->
-                    </div>
-                    <!-- End Portfolio Data -->
-                    <!-- Contact Tab Data -->
-                    <div id="contact">
-                        <section class="clearfix">
-                            <div class="g1">
-                                <div class="sny-icon-box">
-                                    <div class="sny-icon">
-                                        <i class="icon-globe"></i>
-                                    </div>
-                                    <div class="sny-icon-content">
-                                        <h4>My Address</h4>
-                                        <p>Banglore , KA India</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="g1">
-                                <div class="sny-icon-box">
-                                    <div class="sny-icon">
-                                        <i class="icon-phone"></i>
-                                    </div>
-                                    <div class="sny-icon-content">
-                                        <h4>Mobile Number</h4>
-                                        <p>+918955155073<br/></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="g1">
-                                <div class="sny-icon-box">
-                                    <div class="sny-icon">
-                                        <i class="icon-user"></i>
-                                    </div>
-                                    <div class="sny-icon-content">
-                                        <h4>About Me</h4>
-                                        <p>I love to work, so don't be shy, i am just an email away.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="break"></div>
+    <p class="line-1 anim-typewriter">Vaibhav Soni</p>
+    <div id='links' class="line-2">
+        <a href="https://www.linkedin.com/in/vaibhavsonigoldsmith" title="LinkedIn" target="_blank">
+            <i class="fa fa-2x fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Sonivaibhav26" title="Github" target="_blank">
+            <i class="fa fa-2x fa-github"></i>
+        </a>
 
-                        </section>
-                    </div>
-                    <!-- End Contact Data -->
-                </div>
-            </div>
-            <!-- End Tab Container -->
-            <footer>
-                <p>
-                    Designed with lots of love
-                    <!--love at <a href="http://www.mrova.com" title="Pune web designing company">mRova</a>. Just <a href="http://www.mrova.com/free-one-page-responsive-html-resume-template/">Click me to download</a> this template for free :)-->.
-                </p>
-            </footer>
-        </div>
-        <!-- #main -->
+        <a href="https://angel.co/vaibhav-soni" title="Angellist" target="_blank">
+            <i class="fa fa-2x fa-angellist"></i>
+        </a>
+
+        <a download="vaibhav-soni.pdf" href="./resume.pdf" title="Download Resume">
+            <i class="fa fa-2x fa-file-o"></i>
+        </a>
     </div>
-    <!-- #main-container -->
-
-
-
 </body>
 
 </html>
